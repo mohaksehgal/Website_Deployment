@@ -243,7 +243,8 @@
 
 {% if DEPARTMENT == 'CD' %}
     {% if PROCESS == 'BAJAJ' %}
-        <a class="button"href="{% url 'basic_app:BAJAJ_CD_BILLING_DOWNLOAD' %}">download</a>
+        <a class="button"href="{% url 'basic_app:BAJAJ_CD_BILLING_DOWNLOAD' %}">BAJAJ-CD BILLING</a>
+        <a class="button"href="{% url 'basic_app:BAJAJ_PL_BILLING_DOWNLOAD' %}">BAJAJ-PL BILLING</a>
     {% endif %}
 {% endif %}
 

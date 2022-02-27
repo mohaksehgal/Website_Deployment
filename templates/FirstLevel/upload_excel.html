@@ -198,7 +198,10 @@
 
 {% if DEPARTMENT == 'CD' %}
     {% if PROCESS == 'BAJAJ' %}
-        <a class="button"href="{% url 'basic_app:BAJAJ_CD_DOWNLOAD' %}">DOWNLOAD</a>
+        <a class="button"href="{% url 'basic_app:BAJAJ_CD_DOWNLOAD' %}">BAJAJ-CD MIS</a>
+        <a class="button"href="{% url 'basic_app:BAJAJ_CD_MASTER_DOWNLOAD' %}">BAJAJ-CD MASTER FILE</a>
+        <a class="button"href="{% url 'basic_app:BAJAJ_PL_PERFORMANCE_DOWNLOAD' %}">BAJAJ-PL MIS</a>
+        <a class="button"href="{% url 'basic_app:BAJAJ_PL_MASTER_DOWNLOAD' %}">BAJAJ-PL MASTER  FILE</a>
     {% endif %}
 {% endif %}
 </body>

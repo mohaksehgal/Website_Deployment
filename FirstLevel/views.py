@@ -17206,4 +17206,43 @@ def MAGMA_BILLING(request):
 
     return render(request, 'FirstLevel/Billing.html', {'Billing1': excel_data1, 'columns1': C1, 'Total_Payout': Total_Payout, 'DEPARTMENT': final_dep, 'PROCESS': final_process, 'Designation': Designation})
 
-# some changes to check
+
+def BAJAJ_PL_PERFORMANCE_DOWNLOAD(request):
+    # fill these variables with real values
+    filename = os.path.join(BASE_DIR, 'media/BAJAJ-PL/MIS/BAJAJ-PL MIS.xlsx')
+
+    excel = open(filename, 'rb')
+    response = HttpResponse(excel,
+                            content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response['Content-Disposition'] = "attachment; filename=MIS BAJAJ-PL.xlsx"
+    return response
+
+def BAJAJ_CD_MASTER_DOWNLOAD(request):
+    # fill these variables with real values
+    filename = os.path.join(BASE_DIR, 'media/BAJAJ-CD/MIS/MASTER_FILE_BAJAJ.xlsx')
+
+    excel = open(filename, 'rb')
+    response = HttpResponse(excel,
+                            content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response['Content-Disposition'] = "attachment; filename=MASTER BAJAJ-CD.xlsx"
+    return response
+
+def BAJAJ_PL_MASTER_DOWNLOAD(request):
+    # fill these variables with real values
+    filename = os.path.join(BASE_DIR, 'media/BAJAJ-PL/MIS/MASTER_FILE_BAJAJ-PL.xlsx')
+
+    excel = open(filename, 'rb')
+    response = HttpResponse(excel,
+                            content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response['Content-Disposition'] = "attachment; filename=MASTER BAJAJ-PL.xlsx"
+    return response
+
+def BAJAJ_PL_BILLING_DOWNLOAD(request):
+    # fill these variables with real values
+    filename = os.path.join(BASE_DIR, 'media/BAJAJ-PL/Billing/BAJAJ-PL Billing.xlsx')
+
+    excel = open(filename, 'rb')
+    response = HttpResponse(excel,
+                            content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    response['Content-Disposition'] = "attachment; filename=BAJAJ-PL Billing.xlsx"
+    return response
